@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .styleOne{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+     <h1>heading One</h1>
+    <button id="button-0">button0</button>
+    <button class="button">button1</button>
+    <button class="button">button2</button>
+    <button class="button">button3</button>
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        //  1.single button
+        // $('#button-0').click(function(){
+        //     $('h1').text("from button 0")
+        // })
+          //  2.troggle
+          $('#button-0').click(function(){
+            $('h1').toggleClass("styleOne")
+        })
+
+        // 3.multibutton class
+        $('button').click(function(){
+            const value = this.innerHTML;
+            $('h1').text(value)
+        })
+  
+
+    </script>
+</body>
